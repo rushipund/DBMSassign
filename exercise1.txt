@@ -1,0 +1,126 @@
+inexercise 1
+
+create database rushi;
+use rushi;
+Q.1}
+
+create table semp
+(
+EMPNO CHAR(4),
+EMPNAME CHAR(20),
+BASIC FLOAT(9,2),
+DEPTNO CHAR(2),
+DEPTHEAD CHAR(4) 
+);
+
+Q.2}
+create table SDEPT
+(
+DEPTNO CHAR(2),
+DEPTNAME CHAR(15) 
+);
+
+Q.3}
+
+insert into SDEPT values(10,development);
+insert into SDEPT values(20,training);
+select* from sdept;
+
+
+Q.4}
+
+insert into semp values('0001', 'SUNIL', 6000, '10' null );
+insert into semp values('0002',' HIREN', 8000, '20',null );
+insert into semp values('0003', 'ALI', 4000, '10', '0001');
+insert into semp values('0004', 'GEORGE', 6000,null,'0002' );
+
+create table supplier(
+ `S#` varchar(10),
+ Sname varchar(10),
+ Status varchar(10),
+City varchar(10)
+);
+
+create table parts(
+ `P#` varchar(10),
+ Pname varchar(10),
+ Color varchar(10),
+ Weight float(3,2),
+ City varchar(10)
+); 
+
+create table PROJECTS
+(
+`J#` varchar(10), 
+Jname varchar(10),
+City varchar(10)
+); 
+
+create table SUPPLIERPARTSPROJECT
+(
+`S#` varchar(10),
+ `P#` varchar(10),
+ `J#` varchar(10),
+ quantity varchar(10)
+); 
+
+insert into supplier values('s1','udit','10','Dhule');
+insert into supplier values('s2','ashu','20','Nasik');
+insert into supplier values('s3','anu','30','Nowhere');
+insert into supplier values('s4','ravi','34','london'),('s5','vaish','56','paris'),('s6','shru','67','Athens')
+
+
+
+
+
+insert into parts values('p1','micropro','black',13,'pune');
+
+insert into parts values('p2','microcon','white',14,'a.nagar');
+
+insert into parts values('p3','motor','silver',10,'pune');
+
+insert into parts values('p4','wires','pink',12,'London');
+
+
+
+
+
+insert into projects values('j1','supercomp','pune');
+insert into projects values('j2','cdacpro','mumbai');
+insert into projects values('j3','java','bengaluru');
+insert into projects values('j4','embedded','hyderabad');
+insert into projects values('j5','ecpp','athens');
+
+
+Q.5)  select * from supplier;
+
+Q.6)  select `S#`,sname from supplier;
+
+Q.7)   Display the PNAME and COLOR from the P table for the CITY=”London”.
+
+         select pname,color from parts where city='london';
+
+Q.8)   select * from supplier where city='london';
+
+
+Q.9)  select * from supplier where city='paris' or city='athens';
+
+Q.10) select * from projects where city='athens';
+
+Q.11)   Display all the Partnames with the weight between 12 and 14 (inclusive of both). 
+       
+      select  pname from parts where 'weight'=12 or 'weight'=13 or 'weight'='14';
+
+Q.12) Display all the Suppliers with a Status greater than or equal to 20. 
+   
+      select * from supplier where 'status'<=20;
+
+Q.13)  Display all the Suppliers except the Suppliers from London. 
+
+       select * from supplier where city <> 'london';
+
+Q.14)  Display only the Cities from where the Suppliers come from. 
+   
+      select city from supplier;
+    
+
