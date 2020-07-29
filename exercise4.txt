@@ -1,0 +1,41 @@
+1. Display the minimum Status in the Supplier table. 
+
+ANS->select min(status) from supplier;
+
+2. Display the maximum Weight in the Parts table.
+
+ANS-> select max(weight) from parts;
+
+3. Display the average Weight of the Parts.
+
+ANS-> select avg(weight) from parts;
+
+4. Display the total Quantity sold for part ‘P1’. 
+
+ANS-> select count(*) from parts where `p#`='p1'; 
+
+5. Display the total Quantity sold for each part
+
+ANS->select `p#` count(`p#`) from parts;
+
+8. Display the Status and the count of Suppliers with that Status
+
+ANS->select status,
+
+9. Display the count of Projects going on in different cities. 
+
+ANS-> select count(jname) from projects;
+
+10.What is the difference between COUNT(Status) and COUNT(*) ? 
+
+ANS-> select count(status)-count(*) from s;
+
+11. Display the Status and the Count of Suppliers with that Status in the following format
+as shown below:-
+
+Status Count
+Ten      1
+Twenty   2
+Thirty   3 
+
+ANS->  select status, count(sname) from s group by status;
